@@ -1,4 +1,4 @@
-# CyberSaathi AI – Phase 1 custom starter
+# CyberSaathi AI – Identify Cyber Frauds
 
 A beginner-friendly Flask prototype with separate pages for:
 - Message checker
