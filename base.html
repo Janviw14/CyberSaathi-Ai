@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b46">
+  <title>{% block title %}CyberSaathi AI{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <a class="brand" href="/" aria-label="CyberSaathi AI home">
+      <span class="brand-mark">C</span><span><strong>CyberSaathi AI</strong><small>Your digital safety companion</small></span>
+    </a>
+    <label class="language-picker"><span data-i18n="language">Language</span>
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option>
+      </select>
+    </label>
+  </div>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="/message-checker" class="{{ 'active' if page == 'message' else '' }}" data-i18n="nav_message">Message checker</a>
+    <a href="/url-checker" class="{{ 'active' if page == 'url' else '' }}" data-i18n="nav_url">URL checker</a>
+    <a href="/upi-decoder" class="{{ 'active' if page == 'upi' else '' }}" data-i18n="nav_upi">UPI QR decoder</a>
+    <a href="/report-fraud" class="{{ 'active' if page == 'report' else '' }}" data-i18n="nav_report">Report financial cyber fraud</a>
+  </nav>
+</header>
+<main class="container">{% block content %}{% endblock %}</main>
+<footer class="site-footer">
+  <p>CyberSaathi AI is an awareness and preliminary screening tool, not a bank, law-enforcement agency or guarantee of safety.</p>
+  <p>For urgent financial cyber fraud in India, call <a href="tel:1930">1930</a> and report at <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a>.</p>
+</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>

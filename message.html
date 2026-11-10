@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}Message checker | CyberSaathi AI{% endblock %}
+{% block content %}
+<div class="page-intro"><span class="eyebrow">MESSAGE SAFETY</span><h1>Suspicious message checker</h1><p>Paste the text of an SMS or WhatsApp message. We look for common scam patterns without sending it to an external AI service.</p></div>
+<section class="panel">
+  <label class="field-label" for="messageInput">Message text</label>
+  <textarea id="messageInput" maxlength="3000" rows="8" placeholder="Paste the message here. Do not include OTPs, passwords or other secrets."></textarea>
+  <div class="field-meta"><span>Up to 3,000 characters</span><span id="messageCount">0 / 3000</span></div>
+  <div class="actions"><button class="button primary" id="checkMessage">Analyse message</button><button class="button secondary" id="clearMessage">Clear</button></div>
+  <div id="messageResult" class="result hidden" aria-live="polite"></div>
+</section>
+<div class="tip-box"><strong>Safety tip</strong><p>Remove or mask personal details before pasting. Never paste an OTP, UPI PIN, password or full card number.</p></div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block title %}URL checker | CyberSaathi AI{% endblock %}
+{% block content %}
+<div class="page-intro"><span class="eyebrow">LINK SAFETY</span><h1>Suspicious URL checker</h1><p>Inspect the visible structure of a link before opening it. CyberSaathi will not visit or download content from the link.</p></div>
+<section class="panel">
+  <label class="field-label" for="urlInput">Website address or URL</label>
+  <input id="urlInput" type="text" maxlength="2048" placeholder="example.com/verify">
+  <div class="actions"><button class="button primary" id="checkUrl">Inspect URL</button><button class="button secondary" id="clearUrl">Clear</button></div>
+  <div id="urlResult" class="result hidden" aria-live="polite"></div>
+</section>
+<div class="tip-box"><strong>Check before you tap</strong><p>Look carefully at the domain spelling. A padlock/HTTPS alone does not prove that a website is genuine.</p></div>
+{% endblock %}

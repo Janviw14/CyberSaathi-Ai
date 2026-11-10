@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block title %}UPI QR decoder | CyberSaathi AI{% endblock %}
+{% block content %}
+<div class="page-intro"><span class="eyebrow">PAYMENT SAFETY</span><h1>UPI QR decoder</h1><p>Scan a UPI QR code using your camera or upload an image. Review the decoded payment details before proceeding.</p></div>
+<section class="panel">
+  <div class="qr-actions"><button class="button primary" id="startCamera">Start camera</button><label class="button secondary upload-button">Upload QR image<input id="qrFile" type="file" accept="image/*" hidden></label><button class="button secondary" id="stopCamera" disabled>Stop camera</button></div>
+  <video id="qrVideo" class="qr-video hidden" playsinline></video>
+  <canvas id="qrCanvas" class="hidden"></canvas>
+  <p id="qrStatus" class="muted">Camera scanning requires browser support for BarcodeDetector and permission to use your camera.</p>
+  <div class="divider-label"><span>OR PASTE UPI QR CONTENT</span></div>
+  <label class="field-label" for="upiInput">Decoded QR text (UPI URI)</label>
+  <textarea id="upiInput" rows="3" placeholder="upi://pay?pa=merchant@bank&pn=Merchant&am=10.00"></textarea>
+  <button class="button primary" id="decodeUpi">Decode payment details</button>
+  <div id="upiResult" class="result hidden" aria-live="polite"></div>
+</section>
+<div class="tip-box warning"><strong>Important</strong><p>Scanning or decoding does not verify the recipient. Check the payee name and UPI ID in your UPI app. You do not need to enter a UPI PIN to receive money.</p></div>
+{% endblock %}

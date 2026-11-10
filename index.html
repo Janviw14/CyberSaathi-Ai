@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}CyberSaathi AI | Digital safety{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow">PAUSE • CHECK • PROTECT</div>
+  <h1>Make safer decisions<br><span>before you tap.</span></h1>
+  <p>Check suspicious messages, inspect links and decode UPI QR payment details before taking action.</p>
+  <a class="button primary" href="/message-checker">Check a suspicious message <span>→</span></a>
+</section>
+<section class="section-heading"><div><span class="eyebrow">YOUR SAFETY TOOLKIT</span><h2>What would you like to check?</h2></div><p>Choose a tool to get started.</p></section>
+<div class="tool-grid">
+  <a class="tool-card" href="/message-checker"><span class="tool-icon">✉</span><h3>Message checker</h3><p>Review suspicious SMS or WhatsApp text for common scam signals.</p><span class="card-link">Check a message →</span></a>
+  <a class="tool-card" href="/url-checker"><span class="tool-icon">↗</span><h3>URL checker</h3><p>Inspect a link for suspicious structure and common warning signs.</p><span class="card-link">Inspect a URL →</span></a>
+  <a class="tool-card" href="/upi-decoder"><span class="tool-icon">▦</span><h3>UPI QR decoder</h3><p>Read the payee and amount encoded in a UPI QR code.</p><span class="card-link">Decode a QR →</span></a>
+  <a class="tool-card report-card" href="/report-fraud"><span class="tool-icon">!</span><h3>Report financial cyber fraud</h3><p>Follow official steps to report a payment scam in India.</p><span class="card-link">Get reporting steps →</span></a>
+</div>
+<section class="notice"><strong>Remember:</strong> A low-risk result does not mean a message, link or payment request is safe. Verify independently before acting.</section>
+{% endblock %}
